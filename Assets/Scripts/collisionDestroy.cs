@@ -5,7 +5,7 @@ using UnityEngine;
 public class collisionDestroy : MonoBehaviour {
 
     public GameObject ball;
-    public GameObject toBeDestroyed;
+    public GameObject[] toBeDestroyed;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,10 @@ public class collisionDestroy : MonoBehaviour {
     {
         if (collision.gameObject == ball)
         {
-            Destroy(toBeDestroyed);
+            foreach(GameObject GO in toBeDestroyed)
+            {
+                Destroy(GO);
+            }
         }
     }
 }

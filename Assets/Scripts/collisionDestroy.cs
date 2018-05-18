@@ -20,7 +20,7 @@ public class collisionDestroy : MonoBehaviour {
     {
         if (collision.gameObject == ball)
         {
-            foreach(GameObject GO in toBeDestroyed)
+            foreach (GameObject GO in toBeDestroyed)
             {
                 Destroy(GO);
             }
